@@ -1,6 +1,7 @@
 package pl.akademia108;
 
 import java.util.Random;
+import java.util.Arrays;
 
 public class Main {
 
@@ -11,9 +12,6 @@ public class Main {
         int randomnum = random.nextInt(49 - 1 + 1) + 1;
         for (int i=0; i < lotto.length; i++) {
             for (int x = 0; x < i; x++) {
-                if(lotto[x] > randomnum) {
-                    i = 0;
-                }
                 if (lotto[x] == randomnum) {
                     randomnum = random.nextInt(49 - 1 + 1) + 1;
                     x = -1;
@@ -21,8 +19,7 @@ public class Main {
             }
             lotto[i] = randomnum;
         }
-        for(int i = 0; i < lotto.length; i++){
-            System.out.println(lotto[i]);
-        }
+            Arrays.sort(lotto);
+            System.out.println(Arrays.toString(lotto));
     }
 }
