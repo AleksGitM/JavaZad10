@@ -19,7 +19,7 @@ public class Main {
             }
             lotto[i] = randomnum;
         }
-            Arrays.sort(lotto);
-            System.out.println(Arrays.toString(lotto));
+        Arrays.sort(lotto);
+        System.out.println(Arrays.toString(lotto));
     }
 }
